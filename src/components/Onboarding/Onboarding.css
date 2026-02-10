@@ -1,0 +1,147 @@
+.onboarding-container {
+    padding: 24px;
+    padding-bottom: 100px;
+    /* Space for bottom bar */
+    animation: fadeIn 0.4s ease-out;
+}
+
+.onboard-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.onboard-header h1 {
+    font-size: 1.8rem;
+    margin: 0 0 8px;
+    color: white;
+}
+
+.onboard-header p {
+    color: var(--text-muted);
+}
+
+.category-section {
+    margin-bottom: 24px;
+}
+
+.category-title {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    padding-left: 4px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.service-card.selected {
+    background: rgba(195, 245, 60, 0.05);
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--bg-card);
+    /* Fallback */
+    background: var(--brand-color);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.check-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--primary);
+    color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--bg-dark);
+}
+
+.service-name {
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.service-price {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(150%);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 1px solid var(--primary);
+    background: rgba(5, 10, 20, 0.95);
+    /* darker for contrast */
+}
+
+.bottom-bar.visible {
+    transform: translateY(0);
+}
+
+.total-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.count {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.monthly {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.finish-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+}

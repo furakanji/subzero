@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #050a14;
+  /* Deepest Navy/Black */
+  --bg-card: #111827;
+  /* Card Navy */
+  --bg-hover: #1f2937;
+
+  --primary: #c3f53c;
+  /* Volt Green - THE Hero Color */
+  --primary-glow: rgba(195, 245, 60, 0.4);
+
+  --accent: #22d3ee;
+  /* Electric Blue (Secondary) */
+  --danger: #ef4444;
+  /* Red-500 */
+
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
+  /* Cool Gray */
+
+  --glass-border: 1px solid rgba(255, 255, 255, 0.05);
+  --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  background-image: none;
+  /* Solid color for maximum contrast */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Utilities */
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.25s;
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 25px var(--primary-glow);
+  transform: translateY(-1px);
+}
+
+input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+}

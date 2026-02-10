@@ -1,0 +1,100 @@
+.sub-card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sub-card:hover {
+    transform: translateY(-2px);
+    background: var(--bg-hover);
+}
+
+.sub-logo {
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    /* Volt Green Background */
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin-right: 16px;
+    color: #050a14;
+    /* Deep Navy Text on Volt - Maximum Contrast */
+    box-shadow: 0 4px 12px rgba(195, 245, 60, 0.3);
+}
+
+.sub-info {
+    flex: 1;
+    text-align: left;
+}
+
+.sub-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sub-cycle {
+    margin: 2px 0 0;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.sub-cost {
+    text-align: right;
+    margin-right: 16px;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.btn-icon:hover {
+    background: rgba(244, 63, 94, 0.1);
+    color: var(--danger);
+}
+
+.smart-alert {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    animation: pulse 2s infinite;
+    cursor: help;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}

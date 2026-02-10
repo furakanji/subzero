@@ -1,0 +1,244 @@
+.dashboard {
+    padding-bottom: 80px;
+}
+
+.brand-header {
+    padding: 24px 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    border-radius: 22px;
+    /* iOS-style curvature */
+    filter: drop-shadow(0 0 12px rgba(195, 245, 60, 0.4));
+    /* Volt glow increased */
+}
+
+.brand-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0;
+    color: white;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, transparent 60%);
+    animation: rotate 20s linear infinite;
+}
+
+.summary-card {
+    padding: 24px;
+    margin-bottom: 30px;
+    border: 1px solid var(--primary);
+    /* Volt Border */
+    background: var(--bg-card);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(195, 245, 60, 0.1);
+}
+
+.label {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.amount-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: white;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.summary-footer {
+    margin: 12px 0 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.trend-badge {
+    background: rgba(195, 245, 60, 0.1);
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.trend-badge.positive {
+    background: rgba(195, 245, 60, 0.1);
+    color: var(--primary);
+    /* Volt text */
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    color: var(--text-muted);
+    justify-content: space-between;
+    /* Push toggle to right */
+    padding-right: 8px;
+}
+
+.view-toggle {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.view-toggle button {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.view-toggle button.active {
+    background: var(--primary);
+    color: #050a14;
+}
+
+.section-title h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.fab-add {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    /* Squircle */
+    background: var(--primary);
+    color: #0b1120;
+    /* Dark text on Volt */
+    border: none;
+    box-shadow: 0 10px 25px -5px rgba(195, 245, 60, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.fab-add:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px -5px rgba(195, 245, 60, 0.6);
+}
+
+.advice-card {
+    margin-top: 30px;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    border: 1px solid rgba(252, 211, 77, 0.2);
+    background: rgba(252, 211, 77, 0.05);
+}
+
+.advice-content h4 {
+    margin: 0 0 4px 0;
+    color: #fcd34d;
+}
+
+.advice-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0 0 8px 0;
+}
+
+.saving-badge {
+    display: inline-block;
+    background: rgba(195, 245, 60, 0.15);
+    /* Volt tint */
+    color: var(--primary);
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.zero-state {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 24px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.zero-icon {
+    font-size: 3rem;
+    margin-bottom: 8px;
+}
+
+.zero-state h3 {
+    margin: 0;
+    color: white;
+}
+
+.zero-state p {
+    color: var(--text-muted);
+    margin: 0;
+}

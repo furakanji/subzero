@@ -1,0 +1,97 @@
+.analytics-container {
+    padding: 16px 0;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.analytics-card {
+    padding: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.analytics-card h3 {
+    margin: 0 0 24px 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.chart-wrapper {
+    width: 100%;
+    position: relative;
+    height: 300px;
+}
+
+.center-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    /* Adjust for legend height */
+    text-align: center;
+    pointer-events: none;
+}
+
+.total-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.total-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+.category-list h3 {
+    margin: 0 0 16px 8px;
+    font-size: 1rem;
+    color: white;
+}
+
+.cat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+}
+
+.cat-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cat-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cat-amount {
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

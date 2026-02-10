@@ -1,0 +1,152 @@
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.admin-logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.admin-logo h2 {
+    margin: 0;
+    color: white;
+}
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-muted);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: #050a14;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.kpi-card {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.kpi-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kpi-icon.blue {
+    background: rgba(96, 165, 250, 0.1);
+    color: #60a5fa;
+}
+
+.kpi-icon.green {
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+}
+
+.kpi-icon.purple {
+    background: rgba(192, 132, 252, 0.1);
+    color: #c084fc;
+}
+
+.kpi-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.kpi-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.kpi-value {
+    font-size: 2rem;
+    margin: 4px 0;
+    color: white;
+}
+
+.kpi-trend {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.kpi-trend.positive {
+    color: #4ade80;
+}
+
+.data-table {
+    padding: 24px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+td {
+    padding: 16px 12px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge.active {
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+}
+
+.badge.pending {
+    background: rgba(251, 146, 60, 0.1);
+    color: #fb923c;
+}
