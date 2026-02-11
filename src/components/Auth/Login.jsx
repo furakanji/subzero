@@ -42,7 +42,7 @@ export const Login = () => {
             const { error } = await supabase.auth.signInWithOAuth({
                 provider: provider,
                 options: {
-                    redirectTo: window.location.origin
+                    redirectTo: `${window.location.origin}${import.meta.env.BASE_URL}`
                 }
             });
             if (error) throw error;
@@ -55,7 +55,7 @@ export const Login = () => {
         <div className="login-container">
             <div className="login-card glass">
                 <div className="login-header">
-                    <img src="/logo.png" alt="Logo" className="login-logo" />
+                    <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="login-logo" />
                     <h1>Ciao!</h1>
                     <p>Accedi per gestire i tuoi abbonamenti</p>
                 </div>

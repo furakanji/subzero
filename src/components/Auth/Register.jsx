@@ -39,7 +39,7 @@ export const Register = () => {
         <div className="login-container">
             <div className="login-card glass">
                 <div className="login-header">
-                    <img src="/logo.png" alt="Logo" className="login-logo" />
+                    <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="login-logo" />
                     <h1>Crea Account</h1>
                     <p>Inizia a risparmiare con AbbonaMeno!</p>
                 </div>
