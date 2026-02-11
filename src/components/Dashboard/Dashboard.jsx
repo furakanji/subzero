@@ -76,7 +76,7 @@ export const Dashboard = ({ session }) => {
         <div className="dashboard">
             <header className="brand-header">
                 <div className="logo-container">
-                    <img src="/logo.png" alt="AbbonaMeno Logo" className="brand-logo" />
+                    <img src={`${import.meta.env.BASE_URL}logo.png`} alt="AbbonaMeno Logo" className="brand-logo" />
                     <h1 className="brand-title">Abbona<span className="text-primary">Meno</span></h1>
                 </div>
                 <button className="btn-icon" onClick={handleLogout} title="Esci">
