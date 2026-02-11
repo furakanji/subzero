@@ -39,7 +39,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/subzero">
       <div className="app-container">
         <Routes>
           <Route path="/" element={!session ? <Login /> : (session.user.email.includes('admin') ? <Navigate to="/admin" replace /> : <Navigate to="/dashboard" replace />)} />
